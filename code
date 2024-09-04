@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StarWarsControlFlow
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter the name of a start wars character:");
+            string character = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(character))
+            {
+                Console.WriteLine("Character name cannot be empty.");
+            }
+            else if (character == "Luke skywalker"  character == "Yoda")
+            {
+                Console.WriteLine($"{character} is a Jedi.");
+            }
+            else if (character == "Darth Vader"  character == "Emperor Palpatine")
+            {
+                Console.WriteLine($"{character} is a Sith");
+            }
+            else if (character == "Leia Organa" || character == "Han Solo")
+            {
+                Console.WriteLine($"{character} is a Rebel");
+            }
+
+
+            else
+            {
+                Console.WriteLine($"{character}is neither Jedi nor Sith, nor rebel");
+            }
+
+            Console.WriteLine("\nEnter the name of a Star Wars ship:");
+            string ship = Console.ReadLine();
+
+            switch (ship)
+            {
+                case "Millenium Falcon":
+                case "Slave I":
+                    Console.WriteLine("This is a Freighter.");
+                    break;
+                case "X-Wing":
+                case "Y-Wing":
+                    Console.WriteLine("This is a Rebel starfighter.");
+                    break;
+                case "TIE Fighter":
+                case "TIE Bomber":
+                    Console.WriteLine("This is an Imperial starfighter");
+                    break;
+                default:
+                    Console.WriteLine("Unkown ship");
+                    break;
+
+            }
+        }
+    }
+}
